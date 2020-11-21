@@ -10,7 +10,7 @@ let chartValues = [];
 function randomInt(min, max){
     min = Math.ceil(min);
     max = Math.floor(max);
-    return Math.floor(Math.random()*(max-min)+min);
+    return Math.floor(Math.random() * (max - min) + min);
 }
 
 
@@ -29,6 +29,8 @@ async function getData() {
                 let author = post.author;
                 let title = post.title;
                 let ups = post.ups;
+                let message = "<b>Subreddit </b>: " + subreddit + " <b>Author</b>:" + 
+                author + " <b>Title</b>:" + title + " <b>Up votes</b>: " + ups;
                 /*
                     Get a random number within the size of the list
                     Get subreddit, author, title, and ups from record
@@ -37,8 +39,7 @@ async function getData() {
                     Add a new <li> element with the message to the 'redditList' element
                     Add a data entry to chartValues with author as the label and ups as the y component
                 */
-                let message = "<b>Subreddit </b>: " + subreddit + " <b>Author</b>:" + 
-                author + " <b>Title</b>:" + title + " <b>Up votes</b>: " + ups;
+                
 
                 let select = document.getElementById("redditList");
                 select.innerHTML += "<li>" + message + "</li>";
@@ -60,18 +61,14 @@ async function makeChart() {
         title: {
             text: "Upvotes"
         },
-
-        data: [     
-            { 
+        data: [
+            {
                 type: "column",
                 name: "Popular Reddit",
-               
-                dataPoints: chartValues // WHAT GOES HERE???
+                dataPoints: chartValues
             }
         ]
     });
-    
     chart.render();
 }
-
-window.onload = makeChart();
+window.onload = makeChart;

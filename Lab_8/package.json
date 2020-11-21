@@ -1,19 +1,19 @@
 {
   "name": "lab_8",
   "version": "1.0.0",
-  "description": "Lab 8",
+  "description": "lab 8",
   "main": "server.js",
-  "dependencies": {
-    "express": "^4.17.1"
-  },
-  "devDependencies": {},
   "scripts": {
-    "test": "echo"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "node server.js"
+    "url": "git+https://github.com/JStilma/JStilma.github.io.git"
   },
   "author": "Johnathan Saintilma",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JStilma/JStilma.github.io/issues"
+  },
+  "homepage": "https://github.com/JStilma/JStilma.github.io#readme"
 }
